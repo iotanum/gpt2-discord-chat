@@ -6,3 +6,4 @@ data/invalid_lines/*
 data/models_trained/*
 
 aitextgen.tokenizer.json
+aitextgen/*
