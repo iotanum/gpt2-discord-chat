@@ -18,16 +18,14 @@ def run(path_params: str):
     params_gen = params['generation']
     logging.debug(f"Params: {params}")
 
-    timestamp = datetime.utcnow().strftime('%Y%m%d%H%M%S')
     model_name = "gpt2test_20230225181657"
     model_dir = join("data/models_trained", model_name)
-    gpt2_model = aitextgen(model_folder=model_dir, tokenizer_file="aitextgen.tokenizer.json")
+    gpt2_model = aitextgen(model_folder=model_dir,
+                           tokenizer_file="aitextgen.tokenizer.json",
+                           config=join(model_dir, "config.json"),
+                           to_gpu=True)
 
     # Generate
-    logging.info("Generation starting...")
-    generation_folder = join(model_dir, "generation")
-    os.makedirs(generation_folder, exist_ok=True)
-
     prompt = gpt2_model.generate_one(prompt=params_gen['prefix'],
                                      # seed=params_gen['seed'],
                                      max_length=params_gen['max_length'],
