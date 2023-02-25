@@ -1,0 +1,2 @@
+pytorch-lightning==1.7.0
+aitextgen~=0.6.0

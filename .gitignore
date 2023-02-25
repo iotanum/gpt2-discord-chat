@@ -1,0 +1,8 @@
+.idea
+
+data/chat_raw/*
+data/chat_parsed/*
+data/invalid_lines/*
+data/models_trained/*
+
+aitextgen.tokenizer.json
