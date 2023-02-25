@@ -7,3 +7,6 @@ data/models_trained/*
 
 aitextgen.tokenizer.json
 aitextgen/*
+
+**/__pycache__
+test.py
