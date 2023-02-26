@@ -26,7 +26,9 @@ def run(path_params: str):
                            to_gpu=True)
 
     # Generate
-    prompt = gpt2_model.generate_one(prompt=params_gen['prefix'],
+    prompt = "bmw"
+    prompt = gpt2_model.generate_one(
+                                     prompt=prompt,
                                      # seed=params_gen['seed'],
                                      max_length=params_gen['max_length'],
                                      temperature=params_gen['temperature'],
